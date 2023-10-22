@@ -150,3 +150,7 @@ php artisan migrate
 ```
 
 ## 3.1 Legfőbbképpen megjegyezendő, hogy nem kell sql fájlokat dobálgatni egymásnak, mert a laravelnek a migration pont ezért van
+
+## 3.2 web.php
+
+Amikor a web.php-ban változtatunk, akkor oda kell figyelni, hogy olyankor le kell futtatni mindig az alábbi parancsot a terminálban ```php artisan optimize```. Ez azért kell, mert csak ilyenkor kerül elmentésre igazán a web.php tartalma.

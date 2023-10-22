@@ -128,7 +128,7 @@ Ha minden sikerül, akkor az oldalunk az alábbiak szerint fog kinézni:
 
 Dokumentációt ahhoz, hogy hogyan lehet használni a TailwindCSS-t, és a kinézeteket hogyan használhatjuk, az alábbi oldalon megtalálhatóak: <https://tailwindcss.com/docs/>
 
-#### Fontos tudni valók, amikor githubról letöltjuk a projektet
+## 3. Fontos tudni valók, amikor githubról letöltjuk a projektet
 
 Amikor githubról letöltitek a projektet akkor az alábbiakat kell tenni, hogy működjön is a projekt:
 
@@ -141,10 +141,12 @@ composer install
 npm install
 
 php artisan key:generate
+```
 
 (hogy ha pedig már vannak adatbázisban dolgok, amiket létre hoztatok, akkor:)
 
+```BASH
 php artisan migrate
 ```
 
-## Legfőbbképpen megjegyezendő, hogy nem kell sql fájlokat dobálgatni egymásnak, mert a laravelnek a migration pont ezért van
+## 3.1 Legfőbbképpen megjegyezendő, hogy nem kell sql fájlokat dobálgatni egymásnak, mert a laravelnek a migration pont ezért van

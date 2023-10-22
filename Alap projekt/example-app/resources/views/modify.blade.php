@@ -5,15 +5,15 @@
         <form action="/termek/modify/{{$termek->id}}" method="POST" class="m-auto px-10 py-5 bg-gray-100 rounded-lg form-input">
             @csrf
             <div class="text-left w-11/12 m-auto">
-                <label for="name" class="my-6 font-semibold text-left">Termék megnevezése:</label>
+                <label for="megnevezes" class="my-6 font-semibold text-left">Termék megnevezése:</label>
                 <input type="text" value="{{$termek->megnevezes}}" class="my-5 w-full text-xl rounded-md" name="megnevezes" required>
             </div>
             <div class="text-left w-11/12 m-auto">
-                <label for="name" class="my-6 font-semibold text-left">Termék típusa:</label>
+                <label for="tipus" class="my-6 font-semibold text-left">Termék típusa:</label>
                 <input type="text" value="{{$termek->tipus}}" class="my-5 w-full text-xl rounded-md" name="tipus" required>
             </div>
             <div class="text-left w-11/12 m-auto">
-                <label for="name" class="my-6 font-semibold text-left">Termék ára:</label>
+                <label for="ar" class="my-6 font-semibold text-left">Termék ára:</label>
                 <input type="number" value="{{$termek->ar}}" class="my-5 w-full text-xl rounded-md" name="ar" required>
             </div>
 

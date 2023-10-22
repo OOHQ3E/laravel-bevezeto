@@ -23,18 +23,20 @@
 
 ### 2.2 .env
 
-A projekt működéséhez az egyik legszükségesebb dolog a .env fájl, amiben megadhatjuk a projekthez szükséges adatbázis nevét is. Ha nem található egy projektben a .env fájl, akkor a létező .env.example fájlt **másoljuk, majd nevezzük el** azt .env-nek. (Ne azt csináljuk, hogy a ".env.example" fájlt nevezzük át ".env"-re, mert amikor felpush-olunk majd a repo-ra, akkor a .gitignore beállításai miatt a ".env.example" fájl "törlődni" fog a repo-ról)
+A projekt működéséhez az egyik legszükségesebb dolog a .env fájl, amiben megadhatjuk a projekthez szükséges adatbázis nevét is. Ha nem található egy projektben a .env fájl, akkor a létező .env.example fájlt **másoljuk, majd nevezzük el** azt .env-nek. ***(Ne azt csináljuk, hogy a ".env.example" fájlt nevezzük át ".env"-re, mert amikor felpush-olunk majd a repo-ra, a ".env.example" fájl "törlődni" fog a repo-ról)***
 
 A .env fájlban található egy olyan sor, ami úgy néz ki, hogy "DB_DATABASE=laravel", a "laravel"-t nevezzük át annak, amilyen névvel létre hoztuk az adatbázisunkat.
 Itt pedig beállíthatjuk az adatbázishoz a felhasználó nevet és a jelszót (hogy ha van), ha nincs akkor az alap Username:"root" és jelszavat: ""-t adjuk meg
-```
+
+```txt
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
 ### 2.3 Tailwind CSS
 
-A Tailwind CSS egy népszerű CSS keretrendszer, amely előre definiált osztályokat biztosít a webalkalmazások stílusának egyszerűsítéséhez és optimalizálásához. Ezek olyan osztályok formájában vannak meghatározva, amik leírják a kívánt vizuális hatást, ahelyett, hogy egyedi CSS stílusokat írnának az egyes elemekre. Például egy bekezdéshez így tudjuk azt megadni azt, hogy a szövege jobbra zárt és félkövér legyen: 
+A Tailwind CSS egy népszerű CSS keretrendszer, amely előre definiált osztályokat biztosít a webalkalmazások stílusának egyszerűsítéséhez és optimalizálásához. Ezek olyan osztályok formájában vannak meghatározva, amik leírják a kívánt vizuális hatást, ahelyett, hogy egyedi CSS stílusokat írnának az egyes elemekre. Például egy bekezdéshez így tudjuk azt megadni azt, hogy a szövege jobbra zárt és félkövér legyen:
+
 ```html
 <p class="text-right font-bold"> ez egy bekezdés </p>
 ```
@@ -69,7 +71,8 @@ export default {
 }
 ```
 
-* Megnyitjuk a ```./resources/css/app.css``` fájlt, majd az alábbiakat írjuk be: 
+* Megnyitjuk a ```./resources/css/app.css``` fájlt, majd az alábbiakat írjuk be:
+
 ```css
 @tailwind base;
 @tailwind components;
@@ -121,7 +124,7 @@ A ```./resources/views/```-on belül a ```welcome.blade.php``` tartalmát kitör
 ```
 Ha minden sikerül, akkor az oldalunk az alábbiak szerint fog kinézni:
 
-![Kinézet](.\kinézet.bmp)
+![Kinézet](https://github.com/OOHQ3E/laravel-bevezeto/blob/main/kinezet.bmp)
 
 Dokumentációt ahhoz, hogy hogyan lehet használni a TailwindCSS-t, és a kinézeteket hogyan használhatjuk, az alábbi oldalon megtalálhatóak: <https://tailwindcss.com/docs/>
 
@@ -129,7 +132,7 @@ Dokumentációt ahhoz, hogy hogyan lehet használni a TailwindCSS-t, és a kiné
 
 Amikor githubról letöltitek a projektet akkor az alábbiakat kell tenni, hogy működjön is a projekt:
 
-* először is a ".env.example" fájlt **kimásoljátok és átnevezitek** ".env"-re. (Ne azt csináljuk, hogy a ".env.example" fájlt nevezzük át ".env"-re, mert amikor felpush-olunk majd a repo-ra, akkor a .gitignore beállításai miatt a ".env.example" fájl "törlődni" fog a repo-ról)
+* Először is a ".env.example" fájlt **kimásoljátok és átnevezitek** ".env"-re. ***(Ne azt csináljuk, hogy a ".env.example" fájlt nevezzük át ".env"-re, mert amikor felpush-olunk majd a repo-ra, a ".env.example" fájl "törlődni" fog a repo-ról)***
 * Terminálban megnyitjuk a projektet, és az alábbiakat beírjuk sorrendben:
 
 ```BASH
@@ -144,4 +147,4 @@ php artisan key:generate
 php artisan migrate
 ```
 
-#### Legfőbbképpen megjegyezendő, hogy nem kell sql fájlokat dobálgatni egymásnak, mert a laravelnek a migration pont ezért van
+## Legfőbbképpen megjegyezendő, hogy nem kell sql fájlokat dobálgatni egymásnak, mert a laravelnek a migration pont ezért van

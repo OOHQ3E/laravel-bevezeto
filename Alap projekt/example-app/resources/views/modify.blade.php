@@ -1,7 +1,7 @@
 @extends("layouts.app")
 @section("content")
 
-    <div class="m-auto text-center">
+    <div class="text-center w-1/3 m-10">
         <form action="/termek/modify/{{$termek->id}}" method="POST" class="m-auto px-10 py-5 bg-gray-100 rounded-lg form-input">
             @csrf
             <div class="text-left w-11/12 m-auto">

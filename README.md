@@ -143,7 +143,7 @@ npm install
 php artisan key:generate
 ```
 
-(hogy ha pedig már vannak adatbázisban dolgok, amiket létre hoztatok, akkor:)
+hogy ha pedig már vannak adatbázis tábla definíciók a [migrációs fájlokkal](https://github.com/OOHQ3E/laravel-bevezeto/tree/main/Alap%20projekt/example-app/database/migrations), amiket szeretnétek az atabázisba is behúzni, akkor az alábbit kell terminálba írni:
 
 ```BASH
 php artisan migrate
